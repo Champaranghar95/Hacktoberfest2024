@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Web Development Guide & Free Resources</title>
+    <style>
+        :root {
+            --primary-color: #3498db;
+            --secondary-color: #2c3e50;
+            --background-color: #ecf0f1;
+            --text-color: #333;
+        }
+
+        body {
+            font-family: 'Arial', sans-serif;
+            line-height: 1.6;
+            color: var(--text-color);
+            background-color: var(--background-color);
+            margin: 0;
+            padding: 0;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        .logo-box {
+            background-color: #fff;
+            border-radius: 8px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            padding: 20px;
+            margin-bottom: 20px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        .logo {
+            width: 100px;
+            height: 100px;
+            background-color: var(--primary-color);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #fff;
+            font-size: 24px;
+            font-weight: bold;
+        }
+
+        .guide {
+            flex-grow: 1;
+            margin-left: 20px;
+        }
+
+        h1 {
+            color: var(--secondary-color);
+            margin-top: 0;
+        }
+
+        .topic-list {
+            list-style-type: none;
+            padding: 0;
+        }
+
+        .topic-item {
+            background-color: #fff;
+            border-radius: 8px;
+            margin-bottom: 10px;
+            overflow: hidden;
+        }
+
+        .topic-header {
+            background-color: var(--primary-color);
+            color: #fff;
+            padding: 10px 20px;
+            cursor: pointer;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .topic-content {
+            padding: 0 20px;
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.3s ease-out;
+        }
+
+        .topic-content.active {
+            max-height: 1000px;
+            padding: 20px;
+        }
+
+        .arrow {
+            transition: transform 0.3s ease;
+        }
+
+        .arrow.active {
+            transform: rotate(180deg);
+        }
+
+        .resource-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+            gap: 20px;
+        }
+
+        .resource-card {
+            background-color: #fff;
+            border-radius: 8px;
+            padding: 20px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+
+        .resource-card h3 {
+            color: var(--primary-color);
+            margin-top: 0;
+        }
+
+        .resource-card p {
+            margin-bottom: 10px;
+        }
+
+        .resource-card a {
+            color: var(--primary-color);
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        .resource-card a:hover {
+            text-decoration: underline;
+        }
+
+        @media (max-width: 768px) {
+            .logo-box {
+                flex-direction: column;
+                text-align: center;
+            }
+
+            .guide {
+                margin-left: 0;
+                margin-top: 20px;
+            }
+
+            .resource-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="logo-box">
+            <div class="logo">WD</div>
+            <div class="guide">
+                <h1>Web Development Guide & Free Resources</h1>
+                <p>Explore the fundamentals of web development and discover free learning resources to boost your skills.</p>
+            </div>
+        </div>
+
+        <ul class="topic-list">
+            <li class="topic-item">
+                <div class="topic-header">
+                    <span>HTML Basics</span>
+                    <span class="arrow">▼</span>
+                </div>
+                <div class="topic-content">
+                    <p>HTML (HyperText Markup Language) is the backbone of web content. Key concepts include:</p>
+                    <ul>
+                        <li>Document structure (DOCTYPE, html, head, body)</li>
+                        <li>Tags and elements</li>
+                        <li>Attributes</li>
+                        <li>Semantic HTML</li>
+                    </ul>
+                </div>
+            </li>
+            <li class="topic-item">
+                <div class="topic-header">
+                    <span>CSS Fundamentals</span>
+                    <span class="arrow">▼</span>
+                </div>
+                <div class="topic-content">
+                    <p>CSS (Cascading Style Sheets) is used to style web pages. Important aspects include:</p>
+                    <ul>
+                        <li>Selectors and properties</li>
+                        <li>Box model</li>
+                        <li>Layout techniques (Flexbox, Grid)</li>
+                        <li>Responsive design</li>
+                    </ul>
+                </div>
+            </li>
+            <li class="topic-item">
+                <div class="topic-header">
+                    <span>JavaScript Essentials</span>
+                    <span class="arrow">▼</span>
+                </div>
+                <div class="topic-content">
+                    <p>JavaScript adds interactivity to web pages. Key concepts include:</p>
+                    <ul>
+                        <li>Variables and data types</li>
+                        <li>Functions and control structures</li>
+                        <li>DOM manipulation</li>
+                        <li>Event handling</li>
+                    </ul>
+                </div>
+            </li>
+            <li class="topic-item">
+                <div class="topic-header">
+                    <span>Free Learning Resources</span>
+                    <span class="arrow">▼</span>
+                </div>
+                <div class="topic-content">
+                    <p>Explore these free resources to enhance your web development skills:</p>
+                    <div class="resource-grid">
+                        <div class="resource-card">
+                            <h3>MDN Web Docs</h3>
+                            <p>Comprehensive documentation for web technologies.</p>
+                            <a href="https://developer.mozilla.org/" target="_blank" rel="noopener noreferrer">Visit MDN</a>
+                        </div>
+                        <div class="resource-card">
+                            <h3>freeCodeCamp</h3>
+                            <p>Interactive coding challenges and projects.</p>
+                            <a href="https://www.freecodecamp.org/" target="_blank" rel="noopener noreferrer">Start Learning</a>
+                        </div>
+                        <div class="resource-card">
+                            <h3>Codecademy</h3>
+                            <p>Interactive coding lessons with free basic access.</p>
+                            <a href="https://www.codecademy.com/" target="_blank" rel="noopener noreferrer">Explore Courses</a>
+                        </div>
+                        <div class="resource-card">
+                            <h3>W3Schools</h3>
+                            <p>Tutorials and references for web technologies.</p>
+                            <a href="https://www.w3schools.com/" target="_blank" rel="noopener noreferrer">Learn Web Dev</a>
+                        </div>
+                        <div class="resource-card">
+                            <h3>CSS-Tricks</h3>
+                            <p>Articles, tutorials, and snippets for CSS.</p>
+                            <a href="https://css-tricks.com/" target="_blank" rel="noopener noreferrer">Explore CSS</a>
+                        </div>
+                        <div class="resource-card">
+                            <h3>JavaScript.info</h3>
+                            <p>In-depth JavaScript tutorials and explanations.</p>
+                            <a href="https://javascript.info/" target="_blank" rel="noopener noreferrer">Learn JavaScript</a>
+                        </div>
+                    </div>
+                </div>
+            </li>
+        </ul>
+    </div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const topicHeaders = document.querySelectorAll('.topic-header');
+
+            topicHeaders.forEach(header => {
+                header.addEventListener('click', function() {
+                    const content = this.nextElementSibling;
+                    const arrow = this.querySelector('.arrow');
+
+                    content.classList.toggle('active');
+                    arrow.classList.toggle('active');
+
+                    if (content.style.maxHeight) {
+                        content.style.maxHeight = null;
+                    } else {
+                        content.style.maxHeight = content.scrollHeight + "px";
+                    }
+                });
+            });
+        });
+    </script>
+</body>
+</html>
